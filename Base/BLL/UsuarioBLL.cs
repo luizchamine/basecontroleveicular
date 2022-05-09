@@ -7,12 +7,7 @@ namespace BLL
     {
         public void Inserir()
         {
-            /* asdfas df asdf 
-             asdf asd
-            f as
-            fd 
-            asdf
-            asdf */
+            
         }
         public void Excluir()
         {
