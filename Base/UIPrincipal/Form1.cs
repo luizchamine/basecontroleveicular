@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace UIPrincipal
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBLL.Inserir();
         }
     }
 }

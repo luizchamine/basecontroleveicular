@@ -1,11 +1,7 @@
 ﻿using Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -16,7 +12,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = "";
+                cn.ConnectionString = @"User ID=Erisvaldo;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=123";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
