@@ -11,6 +11,7 @@ namespace UIPrincipal
         {
             InitializeComponent();
             usuarioBindingSource.AddNew();
+            
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
@@ -25,6 +26,7 @@ namespace UIPrincipal
                 usuarioBindingSource.EndEdit();
                 Inserir();
                 MessageBox.Show("Cadastro realizado com sucesso!");
+                Close();
             }
             catch (Exception ex)
             {
@@ -41,6 +43,15 @@ namespace UIPrincipal
             usuario.Senha = senhaTextBox.Text;
             usuario.Ativo = ativoCheckBox.Checked;
             usuarioBLL.Inserir(usuario);
+        }
+
+        private void buttonSalvarECadastrarNovo_Click(object sender, EventArgs e)
+        {
+            usuarioBindingSource.EndEdit();
+            Inserir();
+            MessageBox.Show("Cadastro realizado com sucesso!");
+            usuarioBindingSource.AddNew();
+            nomeUsuarioTextBox.Focus();
         }
     }
 }

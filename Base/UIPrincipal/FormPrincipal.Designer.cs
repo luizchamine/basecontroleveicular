@@ -34,14 +34,14 @@ namespace UIPrincipal
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trocarDeUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,14 +75,14 @@ namespace UIPrincipal
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // grupoDeUsuáriosToolStripMenuItem
             // 
             this.grupoDeUsuáriosToolStripMenuItem.Name = "grupoDeUsuáriosToolStripMenuItem";
-            this.grupoDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.grupoDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.grupoDeUsuáriosToolStripMenuItem.Text = "Grupo de usuários";
             // 
             // ajudaToolStripMenuItem
@@ -94,12 +94,6 @@ namespace UIPrincipal
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.sairToolStripMenuItem.Text = "Sair";
             // 
             // trocarDeUsuárioToolStripMenuItem
             // 
@@ -113,6 +107,12 @@ namespace UIPrincipal
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.button4);
@@ -125,21 +125,13 @@ namespace UIPrincipal
             this.panel1.Size = new System.Drawing.Size(1287, 100);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // button4
             // 
-            this.button1.Location = new System.Drawing.Point(12, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 94);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(124, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 94);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(348, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 94);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -149,13 +141,21 @@ namespace UIPrincipal
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button2
             // 
-            this.button4.Location = new System.Drawing.Point(348, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 94);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(124, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 94);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 94);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
@@ -197,6 +197,7 @@ namespace UIPrincipal
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.Text = "FormPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
