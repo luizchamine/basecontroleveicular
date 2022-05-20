@@ -29,6 +29,33 @@ AS
 	SET @Id = (SELECT @@IDENTITY)
 	--SELECT @@IDENTITY
 GO
+
+CREATE PROC SP_BuscarUsuario
+	@Filtro VARCHAR(250) = ''
+AS
+	SELECT Id, Ativo, NomeUsuario, Senha FROM Usuario WHERE NomeUsuario LIKE '%' + @Filtro + '%'
+GO
+
+CREATE PROC SP_AlterarUsuario
+	@Id INT, 
+	@Ativo BIT, 
+	@NomeUsuario VARCHAR(50), 
+	@Senha VARCHAR(50)
+AS
+	UPDATE Usuario SET
+		Ativo = @Ativo,
+		NomeUsuario = @NomeUsuario,
+		Senha = @Senha
+	WHERE Id = @Id
+GO
+	
+CREATE PROC SP_ExcluirUsuario
+	@Id INT
+AS
+	DELETE FROM Usuario WHERE Id = @Id
+GO
+
+
 /*
 EXEC SP_InserirUsuario 0, 'Teste', '123', 1
 EXEC SP_InserirUsuario 0, 'Erisvaldo', '123456', 1
