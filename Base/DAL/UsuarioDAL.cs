@@ -12,7 +12,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = @"User ID=Erisvaldo;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=123";
+                cn.ConnectionString = Conexao.StringDeConexao;
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -64,13 +64,13 @@ namespace DAL
 
             try
             {
-                cn.ConnectionString = @"User ID=Erisvaldo;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=123";
+                cn.ConnectionString = Conexao.StringDeConexao;
                 SqlCommand cmd = new SqlCommand();
                 da.SelectCommand = cmd;
                 da.SelectCommand.Connection = cn;
                 da.SelectCommand.CommandText = "SP_BuscarUsuario";
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-               
+
                 SqlParameter pfiltro = new SqlParameter("@filtro", SqlDbType.VarChar);
                 pfiltro.Value = _filtro;
                 da.SelectCommand.Parameters.Add(pfiltro);
@@ -97,12 +97,12 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = @"User ID=Erisvaldo;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=123";
+                cn.ConnectionString = Conexao.StringDeConexao;
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_AlterarUsuario";
-               
+
                 SqlParameter pid = new SqlParameter("@Id", SqlDbType.Int);
                 pid.Value = _usuario.Id;
                 cmd.Parameters.Add(pid);
@@ -123,7 +123,7 @@ namespace DAL
                 cmd.ExecuteNonQuery();
                 return _usuario;
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Servidor SQL Erro: " + ex.Message);
             }
@@ -141,7 +141,7 @@ namespace DAL
             SqlConnection cn = new SqlConnection();
             try
             {
-                cn.ConnectionString = @"User ID=Erisvaldo;Initial Catalog=Loja;Data Source=.\SQLEXPRESS2019;Password=123";
+                cn.ConnectionString = Conexao.StringDeConexao;
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
