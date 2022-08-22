@@ -45,12 +45,17 @@ namespace UIPrincipal
                 return;
 
             UsuarioBLL usuarioBLL = new UsuarioBLL();
-            int id;
-            id = Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["Id"]);
+            int id = 0;
+            if (Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["Id"]) == 0)
+                MessageBox.Show("não existem usuários no sistema!");
+            else { 
+                id = Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["Id"]);
 
             usuarioBLL.Excluir(id);
             usuarioBindingSource.RemoveCurrent();
             MessageBox.Show("Registro excluído com sucesso!");
+                return;
+            }
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)

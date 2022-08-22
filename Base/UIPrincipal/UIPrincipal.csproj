@@ -58,6 +58,12 @@
     <Compile Include="FormConsultaUsuario.Designer.cs">
       <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <EmbeddedResource Include="FormConsultaUsuario.resx">
       <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +94,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BLL.UsuarioBLL.datasource" />
     <None Include="Properties\DataSources\Model.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Model.Permissao.datasource" />
     <None Include="Properties\DataSources\Model.Usuario.datasource" />

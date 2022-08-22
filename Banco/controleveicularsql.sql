@@ -17,7 +17,7 @@ CREATE TABLE Usuario
 	Ativo BIT
 )
 GO
-
+-- --
 CREATE PROCEDURE SP_InserirUsuario
 	@Id INT OUTPUT,
 	@NomeUsuario VARCHAR(150),
